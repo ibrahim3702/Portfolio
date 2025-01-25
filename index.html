@@ -22,7 +22,7 @@
             a.style.display = "block";
         }
         function setLightMode(remove, add) {
-            document.body.style.backgroundColor = "white";
+            document.body.style.backgroundColor = "#d0d0d6";
             document.body.style.color = "black";
             const r = document.getElementById(remove);
             const a = document.getElementById(add);
@@ -39,7 +39,7 @@
                 <a id="name" href="index.html">IBRAHIM FAISAL</a>
             </div>
             <div class="nav-links">
-                <a id="links" href="index.html">Home</a>
+                <a id="links" href="#bio" onclick="smoothScroll('bio')">Biography</a>
                 <a id="links" href="#skills" onclick="smoothScroll('skills')">Technical Skills</a>
                 <a id="links" href="#interests" onclick="smoothScroll('interests')">Interests</a>
                 <a id="links" href="#achievements" onclick="smoothScroll('achievements')">Achievements</a>
@@ -61,8 +61,8 @@
                     <h3>NUCES-FAST</h3>
                 </a>
                 <div class="contacts">
-                    <a href="https://www.linkedin.com/in/ibrahim-faisal-714812348/" target="_blank" rel="noopener noreferrer"><img id="sm" src="linkedin.png"
-                            alt="linkedin"></a>
+                    <a href="https://www.linkedin.com/in/ibrahim-faisal-714812348/" target="_blank"
+                        rel="noopener noreferrer"><img id="sm" src="linkedin.png" alt="linkedin"></a>
                     <a href="https://github.com/ibrahim3702" target="_blank" rel="noopener noreferrer"><img id="sm"
                             src="github.png" alt="github"></a>
                     <a href="mailto:ibrahimfaisal3702@gmail.com" target="_blank" rel="noopener noreferrer"><img id="sm"
@@ -70,7 +70,7 @@
                 </div>
 
             </div>
-            <div class="bio">
+            <div class="bio" id="bio">
                 <h1>Biography</h1>
                 <br>
                 <p>I am a highly motivated and results-oriented Software Engineering undergraduate student in my 6th
@@ -94,6 +94,9 @@
                     grounded in balance, empathy, and a deep desire to make a positive impact. If I had a superpower, it
                     would be empathy—because I believe that understanding people is the key to creating meaningful
                     connections and impactful work.</p>
+                <p>I am a quick learner, a team player, and possess excellent communication skills. I am confident
+                    in my ability to adapt to new technologies and contribute meaningfully to any software
+                    development project.</p>
                 <div class="row">
                     <div class="skills" id="skills">
                         <h1>Technical Skills</h1>
@@ -146,11 +149,6 @@
                         </ul>
                     </div>
 
-                </div>
-                <div class="row">
-                    <p>I am a quick learner, a team player, and possess excellent communication skills. I am confident
-                        in my ability to adapt to new technologies and contribute meaningfully to any software
-                        development project.</p>
                 </div>
                 <div class="row">
                     <div class="projects" id="projects">
