@@ -378,7 +378,8 @@ footer {
     }
 
     #about {
-        padding: 60px 20px;
+        padding-top: 45%;
+        padding-bottom: 45%;
     }
 
     #myImg {
@@ -434,17 +435,6 @@ footer {
 }
 
 @media (max-width: 600px) {
-
-
-    #about {
-        /* padding: 40px 10px;
-        padding-top: 200px;
-        padding-bottom: 220px; */
-        padding-top: 45%;
-        padding-bottom: 45%;
-    }
-
-
 
     .skill-list li,
     .interest-list li,
