@@ -4,192 +4,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Ibrahim's Portfolio</title>
     <link rel="icon" href="i.png" type="image/x-icon">
-    <script>
-        function smoothScroll(target) {
-            event.preventDefault();
-            const element = document.getElementById(target);
-            element.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-        function setDarkMode(remove, add) {
-            document.body.style.backgroundColor = "#272935";
-            document.body.style.color = "white";
-            const r = document.getElementById(remove);
-            const a = document.getElementById(add);
-            r.style.display = "none";
-            a.style.display = "block";
-        }
-        function setLightMode(remove, add) {
-            document.body.style.backgroundColor = "#d0d0d6";
-            document.body.style.color = "black";
-            const r = document.getElementById(remove);
-            const a = document.getElementById(add);
-            r.style.display = "none";
-            a.style.display = "block";
-        }
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js">
     </script>
 </head>
 
 <body>
+
     <nav>
-        <div class="nav-bar">
-            <div class="name-bar">
-                <a id="name" href="index.html">IBRAHIM FAISAL</a>
-            </div>
-            <div class="nav-links">
-                <a id="links" href="#bio" onclick="smoothScroll('bio')">Biography</a>
-                <a id="links" href="#skills" onclick="smoothScroll('skills')">Technical Skills</a>
-                <a id="links" href="#interests" onclick="smoothScroll('interests')">Interests</a>
-                <a id="links" href="#achievements" onclick="smoothScroll('achievements')">Achievements</a>
-                <a id="links" href="#projects" onclick="smoothScroll('projects')">Projects</a>
-                <div class="nav-icons">
-                    <a id="day" onclick="setDarkMode('day','night')"><img src="brightness.png" alt="daymode"></a>
-                    <a id="night" onclick="setLightMode('night','day')"><img src="sun.png" alt="nightmode"></a>
-                </div>
+        <div class="navbar">
+            <a href="#" class="brand">IBRAHIM FAISAL</a>
+            <ul class="nav-links">
+                <li><a href="#bio" onclick="smoothScroll('#bio')">Biography</a></li>
+                <li><a href="#skills" onclick="smoothScroll('#skills')">Technical Skills</a></li>
+                <li><a href="#interests" onclick="smoothScroll('#interests')">Interests</a></li>
+                <li><a href="#achievements" onclick="smoothScroll('#achievements')">Achievements</a></li>
+                <li><a href="#projects" onclick="smoothScroll('#projects')">Projects</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <img id="light-mode-icon" src="sun.png" alt="Light Mode" onclick="toggleTheme()"
+                    style="cursor:pointer;">
+                <img id="dark-mode-icon" src="brightness.png" alt="Dark Mode" onclick="toggleTheme()"
+                    style="display: none; cursor:pointer;">
             </div>
         </div>
     </nav>
-    <section id="about" class="about">
-        <div class="row">
-            <div class="profile">
-                <img id="myImg" src="ibrahim.jpg" alt="Ibrahim Faisal">
-                <h1>Ibrahim Faisal</h1>
-                <h2>Software Engineer</h2>
-                <a href="https://cfd.nu.edu.pk/" target="_blank" rel="noopener noreferrer">
-                    <h3>NUCES-FAST</h3>
-                </a>
-                <div class="contacts">
-                    <a href="https://www.linkedin.com/in/ibrahim-faisal-714812348/" target="_blank"
-                        rel="noopener noreferrer"><img id="sm" src="linkedin.png" alt="linkedin"></a>
-                    <a href="https://github.com/ibrahim3702" target="_blank" rel="noopener noreferrer"><img id="sm"
-                            src="github.png" alt="github"></a>
-                    <a href="mailto:ibrahimfaisal3702@gmail.com" target="_blank" rel="noopener noreferrer"><img id="sm"
-                            src="gmail.png" alt="gmail"></a>
-                </div>
 
-            </div>
-            <div class="bio" id="bio">
-                <h1>Biography</h1>
-                <br>
-                <p>I am a highly motivated and results-oriented Software Engineering undergraduate student in my 6th
-                    semester at
-                    <a href="https://cfd.nu.edu.pk/" target="_blank" rel="noopener noreferrer">National University of
-                        Computer and Emerging Sciences, FAST,
-                        Chiniot-Faisalabad Campus </a> in Pakistan. With a strong academic background (CGPA: 3.82, <a
-                        href="https://www.nu.edu.pk/Campus/Chiniot-Faisalabad/DeanLists" target="_blank"
-                        rel="noopener noreferrer">Dean's
-                        Honorary List</a> for all 5 semesters) and a passion for problem-solving, I am eager to leverage
-                    my
-                    skills
-                    and knowledge to contribute to innovative software projects.
-                </p>
-                <p>I’m a detail-oriented academic aiming to excel in everything I do. I’m deeply invested in making
-                    meaningful contributions to my field and approach every opportunity with curiosity, a drive to
-                    learn,
-                    and a dedication to helping others grow.</p>
-                <p>I excel in environments where creativity, critical thinking, and collaboration intersect, and my work
-                    is
-                    grounded in balance, empathy, and a deep desire to make a positive impact. If I had a superpower, it
-                    would be empathy—because I believe that understanding people is the key to creating meaningful
-                    connections and impactful work.</p>
-                <p>I am a quick learner, a team player, and possess excellent communication skills. I am confident
-                    in my ability to adapt to new technologies and contribute meaningfully to any software
-                    development project.</p>
-                <div class="row">
-                    <div class="skills" id="skills">
-                        <h1>Technical Skills</h1>
-                        <ul>
-                            <li><b>Programming Languages:</b> Proficient in various programming languages gained through
-                                coursework and personal projects.</li>
-                            <li><b>Fundamentals:</b> Possess a solid foundation in programming fundamentals,
-                                Object-Oriented
-                                Programming (OOP), data structures, databases, operating systems, software construction
-                                and development, software design and architecture, and software quality engineering.
-                            </li>
-                            <li><b> Focus:</b>
-                                Actively expanding my knowledge in web engineering, design and analysis
-                                of algorithms, and computer networks.</li>
-                            <li><b>Web Development</b></li>
-                            <li><b>Programming</b></li>
-                            <li><b>Database Management</b></li>
-                            <li><b>Software Engineering</b></li>
-                        </ul>
-                    </div>
-                    <div class="interests" id="interests">
-                        <h1>Interests</h1>
-                        <ul>
-                            <li><b>Problem Solving</b></li>
-                            <li><b>Programming</b></li>
-                            <li><b>Web Development</b></li>
-                            <li><b>Artificial Intelligence/Machine Learning</b></li>
-                            <li><b>Software Designing</b></li>
-                            <li><b>Software Development</b></li>
-
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="achivements" id="achievements">
-                        <h1>Achivements</h1>
-                        <ul>
-                            <li><b>Competitive Programming:</b> Demonstrated exceptional problem-solving skills through
-                                victories in various programming competitions, including Google Developer of the Year
-                                2023, Nescon Best Speed Programmer 2024, and Nescon Best Blind Coder 2024.</li>
-                            <li><b>Academic Excellence:</b> Consistently maintained a high GPA (3.82) at a university
-                                with a
-                                challenging academic environment (average CGPA: 2.2-2.4). Recognized for academic
-                                excellence by being placed on the Dean's Honorary List for all five semesters.</li>
-                            <li><b>Medals:</b> I've got <b>2 Bronze</b> and <b>3 Gold medals</b> so far in my bachelor's
-                                degree.</li>
-                            <li><b>Teaching Experience:</b> Acted as a teaching assistant for programming fundamentals
-                                on
-                                multiple occasions, effectively guiding and supporting fellow students.</li>
-                        </ul>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="projects" id="projects">
-                        <h1>Projects</h1>
-                        <ol>
-                            <li><b>Online Food Delivery System</b></li>
-                            <ul>
-                                <li>Developed a dynamic food delivery web application using <b>Node.js</b></li>
-                                <li>Implemented <b>RESTful APIs</b> to connect the front-end and back-end.</li>
-                                <li>Utilized <b>MongoDB</b> for database management and real-time order tracking.</li>
-                            </ul>
-                            <li><b>Online Marketplace for Local Businesses</b></li>
-                            <ul>
-                                <li>Developed an e-commerce website for local businesses using <b>Next.js</b> and
-                                    <b>Node.js</b>.
-                                </li>
-                                <li>Implemented features like product catalogs, search filters, and a shopping cart
-                                    using <b>Redux Toolkit</b></li>
-                                <li>Ensured data integrity and scalability using <b>Firebase</b> for database and
-                                    authentication.</li>
-                            </ul>
-                            <li><b>E-Learning Platform</b></li>
-                            <ul>
-                                <li>Designed and developed a responsive e-learning platform using <b>Angular</b> and
-                                    <b>Node.js</b>.
-                                </li>
-                                <li>Created user authentication and role-based access control with <b>JWT</b>.</li>
-                            </ul>
-                        </ol>
-                    </div>
-                </div>
+    <section id="about">
+        <img id="myImg" src="ibrahim.jpg" alt="Ibrahim Faisal">
+        <h1>Ibrahim Faisal</h1>
+        <h2>Software Engineer</h2>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ibrahim-faisal-714812348/" target="_blank"
+                rel="noopener noreferrer"><img src="linkedin.png" alt="linkedin"></a>
+            <a href="https://github.com/ibrahim3702" target="_blank" rel="noopener noreferrer"><img src="github.png"
+                    alt="github"></a>
+            <a href="mailto:ibrahimfaisal3702@gmail.com" target="_blank" rel="noopener noreferrer"><img src="gmail.png"
+                    alt="gmail"></a>
+        </div>
     </section>
-    <div class="footer">
-        <footer>
-            <p><b>Contact me @ibrahimfaisal3702@gmail.com</b></p>
-        </footer>
-    </div>
-</div>
-    
-   
-</body>
 
+    <section id="bio">
+        <h2 class="section-title">Biography</h2>
+        <p>I am a highly motivated and results-oriented Software Engineering undergraduate student in my 6th
+            semester at
+            <a href="https://cfd.nu.edu.pk/" target="_blank" rel="noopener noreferrer">National University of
+                Computer and Emerging Sciences, FAST,
+                Chiniot-Faisalabad Campus </a> in Pakistan. With a strong academic background (CGPA: 3.82, <a
+                href="https://www.nu.edu.pk/Campus/Chiniot-Faisalabad/DeanLists" target="_blank"
+                rel="noopener noreferrer">Dean's
+                Honorary List</a> for all 5 semesters) and a passion for problem-solving, I am eager to leverage
+            my
+            skills
+            and knowledge to contribute to innovative software projects.
+        </p>
+        <p>I’m a detail-oriented academic aiming to excel in everything I do. I’m deeply invested in making
+            meaningful contributions to my field and approach every opportunity with curiosity, a drive to
+            learn,
+            and a dedication to helping others grow.</p>
+        <p>I excel in environments where creativity, critical thinking, and collaboration intersect, and my work
+            is
+            grounded in balance, empathy, and a deep desire to make a positive impact. If I had a superpower, it
+            would be empathy—because I believe that understanding people is the key to creating meaningful
+            connections and impactful work.</p>
+        <p>I am a quick learner, a team player, and possess excellent communication skills. I am confident
+            in my ability to adapt to new technologies and contribute meaningfully to any software
+            development project.</p>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Skills</h2>
+        <ul class="skill-list">
+            <li><strong>Programming Languages:</strong> Proficient in various programming languages gained through
+                coursework and personal projects.</li>
+            <li><strong>Fundamentals:</strong> Solid foundation in programming fundamentals, Object-Oriented Programming
+                (OOP), data structures, databases, operating systems, software construction and development, software
+                design and architecture, and software quality engineering.</li>
+            <li><strong>Focus:</strong> Actively expanding my knowledge in web engineering, design and analysis of
+                algorithms, and computer networks.</li>
+            <li><strong>Web Development</strong></li>
+            <li><strong>Programming</strong></li>
+            <li><strong>Database Management</strong></li>
+            <li><strong>Software Engineering</strong></li>
+        </ul>
+    </section>
+
+    <section id="interests">
+        <h2 class="section-title">Interests</h2>
+        <ul class="interest-list">
+            <li>Problem Solving</li>
+            <li>Programming</li>
+            <li>Web Development</li>
+            <li>Artificial Intelligence/Machine Learning</li>
+            <li>Software Designing</li>
+            <li>Software Development</li>
+        </ul>
+    </section>
+
+    <section id="achievements">
+        <h2 class="section-title">Achievements</h2>
+        <ul class="achievement-list">
+            <li><strong>Competitive Programming:</strong> Demonstrated exceptional problem-solving skills through
+                victories in various programming competitions, including Google Developer of the Year 2023, Nescon Best
+                Speed Programmer 2024, and Nescon Best Blind Coder 2024.</li>
+            <li><strong>Academic Excellence:</strong> Consistently maintained a high GPA (3.82) at a university with a
+                challenging academic environment (average CGPA: 2.2-2.4). Recognized for academic excellence by being
+                placed on the Dean's Honorary List for all five semesters.</li>
+            <li><strong>Medals:</strong> I've got <strong>2 Bronze</strong> and <strong>3 Gold medals</strong> so far in
+                my bachelor's degree.</li>
+            <li><strong>Teaching Experience:</strong> Acted as a teaching assistant for programming fundamentals on
+                multiple occasions, effectively guiding and supporting fellow students.</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <ol class="project-list">
+            <li>
+                <strong>Online Food Delivery System</strong>
+                <ul>
+                    <li>Developed a dynamic food delivery web application using <strong>Node.js</strong></li>
+                    <li>Implemented <strong>RESTful APIs</strong> to connect the front-end and back-end.</li>
+                    <li>Utilized <strong>MongoDB</strong> for database management and real-time order tracking.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Online Marketplace for Local Businesses</strong>
+                <ul>
+                    <li>Developed an e-commerce website for local businesses using <strong>Next.js</strong> and
+                        <strong>Node.js</strong>.
+                    </li>
+                    <li>Implemented features like product catalogs, search filters, and a shopping cart
+                        using <strong>Redux Toolkit</strong></li>
+                    <li>Ensured data integrity and scalability using <strong>Firebase</strong> for database and
+                        authentication.</li>
+                </ul>
+            </li>
+            <li>
+                <strong>E-Learning Platform</strong>
+                <ul>
+                    <li>Designed and developed a responsive e-learning platform using <strong>Angular</strong> and
+                        <strong>Node.js</strong>.
+                    </li>
+                    <li>Created user authentication and role-based access control with <strong>JWT</strong>.</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <footer>
+        <p>Contact me @ibrahimfaisal3702@gmail.com</p>
+    </footer>
+
+</body>
 
 </html>
