@@ -17,14 +17,25 @@
     <nav>
         <div class="navbar">
             <a href="#" class="brand">IBRAHIM FAISAL</a>
-            <ul class="nav-links">
-                <li><a href="#bio" onclick="smoothScroll('#bio')">Biography</a></li>
-                <li><a href="#skills" onclick="smoothScroll('#skills')">Technical Skills</a></li>
-                <li><a href="#interests" onclick="smoothScroll('#interests')">Interests</a></li>
-                <li><a href="#achievements" onclick="smoothScroll('#achievements')">Achievements</a></li>
-                <li><a href="#projects" onclick="smoothScroll('#projects')">Projects</a></li>
+            <div class="menu-parent" onclick="toggleMenu()">
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#bio" onclick="smoothScroll('bio'); return false;"">Biography</a></li>
+                <li><a href=" #skills" onclick="smoothScroll('skills'); return false;"">Technical Skills</a></li>
+                <li><a href=" #interests" onclick="smoothScroll('interests'); return false;"">Interests</a></li>
+                <li><a href=" #achievements" onclick="smoothScroll('achievements'); return false;"">Achievements</a></li>
+                <li><a href=" #projects" onclick="smoothScroll('projects'); return false;"">Projects</a></li>
+                <li class=" theme-toggle-mobile">
+                        <img id="light-mode-icon-mobile" src="sun.png" alt="Light Mode" onclick="toggleTheme()"
+                            style="cursor:pointer;">
+                        <img id="dark-mode-icon-mobile" src="brightness.png" alt="Dark Mode" onclick="toggleTheme()"
+                            style="display: none; cursor:pointer;">
+                </li>
             </ul>
-            <div class="theme-toggle">
+            <div class=" theme-toggle">
                 <img id="light-mode-icon" src="sun.png" alt="Light Mode" onclick="toggleTheme()"
                     style="cursor:pointer;">
                 <img id="dark-mode-icon" src="brightness.png" alt="Dark Mode" onclick="toggleTheme()"

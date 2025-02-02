@@ -24,6 +24,21 @@ section {
     flex: 1;
 }
 
+.menu-parent {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-icon {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.3s;
+    /* Smooth transition for icon animation */
+}
+
 nav {
     background-color: #fff;
     padding: 20px;
@@ -48,7 +63,6 @@ body.dark-mode {
 
 body.dark-mode .section-title,
 body.dark-mode .brand,
-body.dark-mode .nav-links a,
 body.dark-mode .skill-list li,
 body.dark-mode .interest-list li,
 body.dark-mode .achievement-list li,
@@ -73,6 +87,7 @@ body.dark-mode nav {
 body.dark-mode #myImg {
     border: 5px solid #555;
 }
+
 
 .theme-toggle {
     display: flex;
@@ -144,6 +159,10 @@ body:not(.dark-mode) .theme-toggle button:nth-child(1) {
     background-color: #f0f0f0;
 }
 
+body.dark-mode .menu-icon {
+    background-color: white;
+}
+
 #about {
     text-align: center;
     padding: 100px 0;
@@ -197,14 +216,37 @@ body:not(.dark-mode) .theme-toggle button:nth-child(1) {
     filter: grayscale(0);
 }
 
-#bio {}
-
 .section-title {
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 20px;
     color: #333;
     text-align: center;
+    margin-top: 4%;
+}
+
+.theme-toggle-mobile {
+    display: none;
+    /* Initially hidden on larger screens */
+    justify-content: center;
+    /* Center the icons */
+    padding: 10px 0;
+    /* Add some vertical padding */
+    border-top: 1px solid #eee;
+    /* Add a separator */
+}
+
+.theme-toggle-mobile img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin: 0 10px;
+    /* Add some space between the icons */
+}
+
+.theme-toggle-mobile img:hover {
+    opacity: 0.8;
 }
 
 .skill-list,
@@ -260,8 +302,59 @@ footer {
 }
 
 @media (max-width: 1000px) {
-    .navbar {
+    .menu-parent {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
         flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    .theme-toggle {
+        display: none;
+        /* Hide the desktop theme toggle */
+    }
+
+    .theme-toggle-mobile {
+        display: flex;
+        /* Show the mobile theme toggle */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        display: block;
+    }
+
+    .menu-parent.active .menu-icon:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+
+    .menu-parent.active .menu-icon:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-parent.active .menu-icon:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
     }
 
     .nav-links {
@@ -269,6 +362,11 @@ footer {
         text-align: center;
         justify-content: center;
         flex-wrap: wrap;
+        display: none;
+    }
+
+    .theme-toggle {
+        display: none;
     }
 
     .nav-links li {
@@ -298,6 +396,7 @@ footer {
 
     .section-title {
         font-size: 1.5rem;
+        margin-top: 20%;
     }
 
     .skill-list li,
