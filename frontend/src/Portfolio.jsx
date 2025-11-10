@@ -1,59 +1,62 @@
 import React from "react";
 import { Mail, MapPin, Github, Linkedin, Download, Briefcase, GraduationCap, Code, Server, Cloud, User, Contact, Share2 } from "lucide-react";
 import "./Portfolio.css";
+import profilePic from './assets/ProfilePic.jpg';
 
 export default function Portfolio() {
     const portfolioData = {
-        name: "John Doe",
-        title: "Senior Software Engineer",
-        bio: "15+ years building scalable systems and leading engineering teams with expertise in cloud architecture and distributed systems",
-        email: "john.doe@example.com",
-        location: "San Francisco, CA",
-        github: "https://github.com/johndoe",
-        linkedin: "https://linkedin.com/in/johndoe",
+        name: "Ibrahim Faisal",
+        title: "Software Engineer",
+        bio: "Software Engineering student at FAST NUCES with expertise in AI/ML model training, NLP, and generative AI. Passionate about R&D and data-driven innovation",
+        email: "ibrahimfaisal3702@gmail.com",
+        location: "Faisalabad, Pakistan",
+        github: "https://github.com/ibrahim3702",
+        linkedin: "https://www.linkedin.com/in/ibrahim-faisal-714812348/",
         cvUrl: "/path-to-your-cv.pdf",
-        profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+        profileImage: profilePic,
 
         coreSkills: {
-            languages: ["TypeScript", "Python", "Go", "Java", "SQL"],
-            backend: ["Node.js", "PostgreSQL", "Redis", "MongoDB", "GraphQL"],
+            languages: ["Python", "Go", "JavaScript", "SQL", "C++", "Java", "C/C#", "TypeScript"],
+            backend: ["Node.js", "PostgreSQL", "Redis", "MongoDB", "Flask", "NestJS", "MongoDB"],
             cloud: ["AWS", "Kubernetes", "Docker", "Terraform", "CI/CD"],
+            frontend: ["ReactJS", "NextJS", "PostCSS", "Tailwind", "Bootstrap"],
+            ai_ml: [
+                "Python ML",
+                "TensorFlow",
+                "PyTorch",
+                "Pandas",
+                "NumPy",
+                "NLP",
+                "Computer Vision",
+                "Hugging Face",
+                "FastAPI",
+                "Generative AI"
+            ]
+
         },
 
         experience: [
             {
-                title: "Senior Software Engineer",
-                company: "Tech Corp",
-                period: "2020 - Present",
-                description:
-                    "Led development of microservices architecture handling 10M+ daily requests, resulting in 40% improvement in system performance and 99.9% uptime.",
-            },
-            {
-                title: "Software Engineer",
-                company: "Innovation Labs",
-                period: "2017 - 2020",
-                description: "Architected cloud-native applications using AWS services, mentored 5+ junior developers, and implemented agile development practices.",
-            },
-            {
                 title: "Full Stack Developer",
-                company: "StartUp Inc",
-                period: "2015 - 2017",
-                description: "Built scalable web applications using React and Node.js, contributing to 300% user growth over two years.",
+                company: "Freelance Projects",
+                period: "2024 - Present",
+                description:
+                    "Developing end-to-end web applications for clients using React, Node.js, and AWS, focusing on performance optimization and user experience enhancements.",
+            },
+            {
+                title: "AI/ML Engineer",
+                company: "Freelance Projects",
+                period: "2024 - Present",
+                description: "Building and deploying machine learning models for various applications, including NLP and computer vision, utilizing TensorFlow and PyTorch frameworks.",
             },
         ],
 
         education: [
             {
-                degree: "Master of Science in Computer Science",
-                school: "Stanford University",
-                period: "2013 - 2015",
-                description: "Specialized in Distributed Systems and Machine Learning. Published research on scalable microservices architecture.",
-            },
-            {
-                degree: "Bachelor of Science in Computer Engineering",
-                school: "University of California",
-                period: "2009 - 2013",
-                description: "Dean's List, GPA: 3.8/4.0. President of Computer Science Society. Graduated Summa Cum Laude.",
+                degree: "Bachelor of Science in Software Engineering",
+                school: "FAST National University of Computer and Emerging Sciences",
+                period: "2022 - 2026",
+                description: "Dean's List, GPA: 3.82/4.0. Gold Medalist of Software Engineering Department",
             },
         ],
     };
@@ -103,30 +106,48 @@ export default function Portfolio() {
                 <section className="skills-section">
                     <h2 className="section-title">Core Skills</h2>
 
-                    <div className="skill-group">
-                        <h3><Code size={20} /> Languages & Frameworks</h3>
-                        <div className="skill-tags">
-                            {portfolioData.coreSkills.languages.map((skill, idx) => (
-                                <span key={idx} className="skill-tag">{skill}</span>
-                            ))}
+                    <div className="skills-container">
+                        <div className="skill-group">
+                            <h3><Code size={20} /> Languages</h3>
+                            <div className="skill-tags">
+                                {portfolioData.coreSkills.languages.map((skill, idx) => (
+                                    <span key={idx} className="skill-tag">{skill}</span>
+                                ))}
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="skill-group">
-                        <h3><Server size={20} /> Backend Technologies</h3>
-                        <div className="skill-tags">
-                            {portfolioData.coreSkills.backend.map((skill, idx) => (
-                                <span key={idx} className="skill-tag">{skill}</span>
-                            ))}
+                        <div className="skill-group">
+                            <h3><Server size={20} /> Backend</h3>
+                            <div className="skill-tags">
+                                {portfolioData.coreSkills.backend.map((skill, idx) => (
+                                    <span key={idx} className="skill-tag">{skill}</span>
+                                ))}
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="skill-group">
-                        <h3><Cloud size={20} /> Cloud & Infrastructure</h3>
-                        <div className="skill-tags">
-                            {portfolioData.coreSkills.cloud.map((skill, idx) => (
-                                <span key={idx} className="skill-tag">{skill}</span>
-                            ))}
+                        <div className="skill-group">
+                            <h3><Cloud size={20} /> Cloud</h3>
+                            <div className="skill-tags">
+                                {portfolioData.coreSkills.cloud.map((skill, idx) => (
+                                    <span key={idx} className="skill-tag">{skill}</span>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="skill-group">
+                            <h3><Cloud size={20} /> Frontend</h3>
+                            <div className="skill-tags">
+                                {portfolioData.coreSkills.frontend.map((skill, idx) => (
+                                    <span key={idx} className="skill-tag">{skill}</span>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="skill-group">
+                            <h3><Cloud size={20} /> AI/ML</h3>
+                            <div className="skill-tags">
+                                {portfolioData.coreSkills.ai_ml.map((skill, idx) => (
+                                    <span key={idx} className="skill-tag">{skill}</span>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </section>
