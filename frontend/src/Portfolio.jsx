@@ -2,6 +2,7 @@ import React from "react";
 import { Mail, MapPin, Github, Linkedin, Download, Briefcase, GraduationCap, Code, Server, Cloud, User, Contact, Share2 } from "lucide-react";
 import "./Portfolio.css";
 import profilePic from './assets/ProfilePic.jpg';
+import CV from './assets/CV.pdf';
 
 export default function Portfolio() {
     const portfolioData = {
@@ -12,7 +13,7 @@ export default function Portfolio() {
         location: "Faisalabad, Pakistan",
         github: "https://github.com/ibrahim3702",
         linkedin: "https://www.linkedin.com/in/ibrahim-faisal-714812348/",
-        cvUrl: "/path-to-your-cv.pdf",
+        cvUrl: CV,
         profileImage: profilePic,
 
         coreSkills: {
